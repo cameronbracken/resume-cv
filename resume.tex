@@ -1,0 +1,94 @@
+% cv example for classicthesis.sty
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage{url}
+\usepackage[nochapters]{classicthesis}
+
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large\color{RoyalBlue}}
+\renewcommand*{\cvlabelfont}{\qquad}
+\areaset[5mm]{335pt}{684pt}% 609 + 33 + 42 head \the\footskip
+%\setlength{\cvlabelwidth}{50mm}%LabelsAligned
+%\setlength{\textwidth}{20cm}%LabelsAligned
+%\setlength{\cvlabelsep}{50mm}%LabelsAligned
+%\setlength{\marginparwidth}{7.5em}%
+%\setlength{\marginparsep}{10em}%
+\AtBeginDocument{% 
+    \settowidth{\cvlabelwidth}{%        \cvlistheadingfont Student Researcher %
+    }%
+}
+
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={Cameron Bracken's Resume},%
+    pdfauthor={Cameron Bracken},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\begin{document}
+    \begin{cv}{\spacedallcaps{R\'esum\'e}}
+        \pdfbookmark[1]{Cameron Bracken}{info}
+        \begin{cvlist}{}\label{info}  
+            \item   Cameron Bracken
+            \item   \url{cameron.bracken@colorado.edu}
+            %\item   925.548.7392
+            %\item   \url{http://www.linkedin.com/pub/cameron-bracken/20/31b/996}
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Education}{edu}
+        \begin{cvlist}{\spacedlowsmallcaps{Education}}\label{edu}
+            \item[M.S. Cantidate]   { Civil, Environmental and Architectural Engineering (Hydrology, Water Resources, and Environmental Fluid Mechanics)}, {\it University of Colorado at Boulder}, 2009 - Present 
+            \item[B.S.]   { Environmental Resources Engineering and Applied Mathematics}, {\it Humboldt State University}, 2009
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Experience}{exp}
+        \begin{cvlist}{\spacedlowsmallcaps{Experience}}\label{exp}
+            {\setlength{\itemsep}{1pt}
+            \setlength{\parskip}{0pt}
+            \setlength{\parsep}{0pt}
+            
+            \item[Graduate Research]
+            \item[Assistant] Center for Advanced Decision Support for Water and Environmental Systems, 2009 - Present
+            }
+            \item[Student Researcher] National Weather Service, Eureka CA, 2008
+            \item[Student Researcher] Environmental Fluids Research Experience for Undergraduates, University of Colorado at Boulder, 2007
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Skills}{skills}
+        \begin{cvlist}{\spacedlowsmallcaps{Skills}}\label{skills}
+            \item[Modeling] Experience implementing: finite differences, finite elements, optimization, statistical forecasting, time series modeling, Monte Carlo simulation, Particle tracking
+            \item[Models] Experienced with \textsc{adcirc}, \textsc{swan}, \textsc{modflow}, \textsc{rma2}, \textsc{hec--ras}, \textsc{hec--hms}, RiverWare
+            \item[OS] Proficient with Mac OS X, Linux, Unix, Windows (XP, Vista, 7)
+            \item[Programming] Proficient with R, Matlab, Fortran 90/95, \LaTeX, HTML, CSS, PHP, Python, Excel
+            \item Familiar with Fortran 77, Ruby, Perl, MySQL, C, C++
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Awards}{awards}    
+        \begin{cvlist}{\spacedlowsmallcaps{Awards}}\label{awards}
+            \item   Department Fellow, Civil, Environmental and Architectural Engineering, 2009 - Present
+            \item   Best Undergraduate Research Project, Humboldt State University, Spring 2009
+            \item   Homer Arnold Award in Applied Engineering for outstanding achievement in applied engineering design involving environmental and resource problems, Humboldt State University, Spring 2009 
+            \item   Roscoe-Schneller Award for outstanding potential in Environmental Resources Engineering, Humboldt State University, Spring 2007 (\$500).
+
+	        \item Robert S. Chambers Award for academic achievement in mathmatics, Humboldt State University, Spring 2007 (\$500).
+
+	        \item Honorable mention, 2007 COMAP Mathematical Contest in Modeling (MCM).
+	
+	        \item Honorable mention, 2008 COMAP Mathematical Contest in Modeling (MCM).
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Publications}{pub}    
+        \begin{cvlist}{\spacedlowsmallcaps{Publications}}\label{pub}
+            \item   Bracken, C., B. Rajagopalan, and J. Prairie (2010), A multisite seasonal ensemble streamflow forecasting technique, Water Resour. Res., 46, W03532, doi:10.1029/2009WR007965.
+        \end{cvlist}
+    \end{cv}
+\end{document}
