@@ -1,0 +1,112 @@
+% cv example for classicthesis.sty
+\documentclass[10pt,a4paper]{scrartcl}
+\usepackage[LabelsAligned]{currvita} % nice cv style
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[nochapters]{classicthesis}
+
+\renewcommand*{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand*{\cvlistheadingfont}{\large\color{RoyalBlue}}
+\renewcommand*{\cvlabelfont}{\qquad}
+\areaset[5mm]{345pt}{684pt}% 609 + 33 + 42 head \the\footskip
+%335
+%\setlength{\cvlabelwidth}{50mm}%LabelsAligned
+%\setlength{\textwidth}{20cm}%LabelsAligned
+%\setlength{\cvlabelsep}{50mm}%LabelsAligned
+%\setlength{\marginparwidth}{7.5em}%
+%\setlength{\marginparsep}{10em}%
+\AtBeginDocument{% 
+    \settowidth{\cvlabelwidth}{%
+        \cvlistheadingfont Student Researcher %
+    }%
+}
+
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={Cameron Bracken's Resume},%
+    pdfauthor={Cameron Bracken},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+\begin{document}
+    \begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
+        \pdfbookmark[1]{Cameron Bracken}{info}
+        \begin{cvlist}{}\label{info}  
+            \item   Cameron Bracken
+            \item   \url{cameron.bracken@colorado.edu}
+            %\item   925.548.7392
+            %\item   \url{http://www.linkedin.com/pub/cameron-bracken/20/31b/996}
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Education}{edu}
+        \begin{cvlist}{\spacedlowsmallcaps{Education}}\label{edu}
+            \item[M.S. Cantidate] \textbf{University of Colorado at Boulder}: { Civil, Environmental and Architectural Engineering, Department of Hydrology, Water Resources, and Environmental Fluid Mechanics},  2009 - Present 
+            \item Thesis: ``Seasonal to two year forecasting of water supply and implications for water management in the Upper Colorado River Basin''
+            \item[B.S.] \textbf{Humboldt State University}: {Environmental Resources Engineering and Applied Mathematics}, 2009
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Experience}{exp}
+        \begin{cvlist}{\spacedlowsmallcaps{Experience}}\label{exp}
+            {\setlength{\itemsep}{1pt}
+            \setlength{\parskip}{0pt}
+            \setlength{\parsep}{0pt}
+            
+            \item[2009 - Present] Graduate Research Assistant Center for Advanced Decision Support for Water and Environmental Systems
+            }
+            \item[2008] Student Researcher, National Weather Service, Eureka CA
+            \item[2007] Student Researcher, Environmental Fluids Research Experience for Undergraduates, University of Colorado at Boulder
+        \end{cvlist}
+        
+%        \pdfbookmark[1]{Research Interests}{interests}
+%        \begin{cvlist}{\spacedlowsmallcaps{Research Interests}}\label{interests}
+%            \item[] Stochastic Hydrology, Time series modeling, Forecasting,  
+%        \end{cvlist}
+        
+        \pdfbookmark[1]{Awards}{awards}    
+        \begin{cvlist}{\spacedlowsmallcaps{Awards}}\label{awards}
+            \item   \textit{Department Fellow}, Civil, Environmental and Architectural Engineering, 2009 - Present
+            \item   \textit{Best Undergraduate Research Project}, Humboldt State University, Spring 2009
+            \item   \textit{Homer Arnold Award} in Applied Engineering for outstanding achievement in applied engineering design involving environmental and resource problems, Humboldt State University, Spring 2009 
+            \item   \textit{Roscoe-Schneller Award} for outstanding potential in Environmental Resources Engineering, Humboldt State University, Spring 2007 (\$500).
+
+	        \item \textit{Robert S. Chambers Award} for academic achievement in mathmatics, Humboldt State University, Spring 2007 (\$500).
+
+	        \item \textit{Honorable mention}, 2007 COMAP Mathematical Contest in Modeling (MCM).
+	
+	        \item \textit{Honorable mention}, 2008 COMAP Mathematical Contest in Modeling (MCM).
+        \end{cvlist}
+        
+        \pdfbookmark[1]{Publications}{pub}    
+        \begin{cvlist}{\spacedlowsmallcaps{Publications}}\label{pub}
+            \item   Bracken, C., B. Rajagopalan, and J. Prairie (2010), A multisite seasonal ensemble streamflow forecasting technique, Water Resour. Res., 46, W03532, doi:10.1029/2009WR007965.
+        \end{cvlist}
+
+        \pdfbookmark[1]{Software}{software}    
+        \begin{cvlist}{\spacedlowsmallcaps{Software}}\label{software}
+            \item Charlie Sharpsteen and Cameron Bracken (2011). \textit{tikzDevice: A Device for R Graphics Output in PGF/TikZ Format.}  R package version 0.6.1.
+            \item Cameron Bracken  and Charlie Sharpsteen (2011). \textit{pgfSweave: Quality speedy graphics compilation and caching with Sweave.} R package version 1.2.1.
+        \end{cvlist}
+
+        \pdfbookmark[1]{Presentations}{pres}    
+        \begin{cvlist}{\spacedlowsmallcaps{Presentations}}\label{pres}
+            \item \textit{ What the heck is LATEX?} Seminar, Humboldt State University, September 18 2008
+            \item \textit{ The wonderful world of R}. Seminar, Humboldt State Unversity, 26 February 2009
+            \item \textit{ A Multi-Site Streamflow Forecast Framework: Application to the Upper Colorado River Basin}. AGU Fall Meeting H32E: Using Climate Information for Forecast Applications in Hydrology, Water and Energy Management, and Other Sectors II, August 9, 2007.
+            \item \textit{ Reclamation Review of Stochastic Streamflow Simulation at Interannual and Interdecadal Time Scales and Implications to Water Resources Management: Past, Present and Future Work}. Presented to the Colorado River Basin Hydrology Working Group, October 5th, 2009. 
+            \item \textit{ Experiences with Policy Development and Forecasting for the Midterm Probabilistic Model}. Presented at the RiverWare Users Group Meeting, Febrary 11th, 2010. 
+            \item \textit{ Reclamation Review of Stochastic Streamflow Simulation at Interannual and Interdecadal Time Scales and Implications to Water Resources Management: Project overview}. Presented at the Seasonal to Year-Two Colorado River Streamflow Prediction Workshop, Colorado Basin River Forecast Center, Salt Lake City, Utah, March 21, 2011
+            \item \textit{ Interannual Forecasting of Upper Colorado River Flow}. Poster presented at the Hydrologic Sciences Symposium, University of Colorado at Boulder, March 13 2011. 
+            \item \textit{ Large Scale Hydrology and Water Resources in the Upper Colorado River Basin}. Guest Lecture, Mountain Geography, May, 2011.
+
+        \end{cvlist}
+    \end{cv}
+\end{document}
